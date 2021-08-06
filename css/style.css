@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    
+  }
+
+  :root {
+    --bright_orange: hsl(31, 77%, 52%);
+    --dark_cyan: hsl(184, 100%, 22%);
+    --very_dark_cyan: hsl(179, 100%, 13%);
+    --transparent_white_paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very_light_gray_background_headings_buttons: hsl(0, 0%, 95%);
+
+    /* linker Seitenabstand der Card-Elemente */
+    --left_side_distance_desktop: 3rem;
+  }
+
+  /*
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+  */
+
+h1 {
+    color: var(--very_light_gray_background_headings_buttons);
+    font-size: 300%;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p {
+    color: var(--transparent_white_paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card-one  {
+    background-color: var(--bright_orange);
+}
+
+.card-two {
+    background-color: var(--dark_cyan);
+}
+
+.card-three {
+    background-color: var(--very_dark_cyan);
+}
+
+  @media only screen and (max-width: 600px) {
+    
+    main {
+        width: 100vw; 
+        margin-top: 5vh;       
+    }
+
+    .card-one, .card-two, .card-three {
+        width: 90%;
+        max-width: 375px;
+        margin: auto;
+    }
+
+    h1, p {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 10%;        
+    }
+
+    img, button {
+        margin-left: 15%;
+        margin-bottom: 10%;
+    }
+
+    img {
+        margin-top: 10%;
+    }
+    
+    p {
+        line-height: 150%;        
+    }
+
+    button {
+        width: 45%;
+        background-color: var(--very_light_gray_background_headings_buttons);
+        height: 5vh;
+        font-family: 'Lexend Deca', sans-serif;
+        border: none;
+        border-radius: 40px;        
+    }
+  
+    .card-one button {
+        color: var(--bright_orange);
+    }
+
+    .card-two button {
+        color: var(--dark_cyan);
+    }
+    .card-three button {
+        color: var(--very_dark_cyan);
+    }
+
+    .card-one {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .card-three {
+        border-radius: 0 0 5px 5px;
+    }
+    
+    footer {
+        
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5%;        
+    }    
+    
+    footer a {
+        text-decoration: none;
+        color: black;
+    }
+
+    footer a:visited {
+        color: black;
+    }    
+}
+
+  @media only screen and (min-width: 601px) {
+    
+    main {
+        
+        max-width: 1440px;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);         
+    }
+
+    .card-one {
+        border-radius: 7px 0 0 7px;
+    }
+
+    .card-three {
+        border-radius: 0 7px 7px 0;
+    }
+
+    .card-one, .card-two, .card-three {
+        max-width: 288px;             
+    }
+
+    h1, p {
+        margin-left: var(--left_side_distance_desktop);
+        width: 70%;                 
+    }
+
+    p {
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+   
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    img, button {
+        margin-left: var(--left_side_distance_desktop);
+        margin-bottom: 10%;
+    }
+
+    img {
+        margin-top: 10%;
+    }
+
+    button {
+        width: 45%;
+        background-color: var(--very_light_gray_background_headings_buttons);
+        height: 5vh;
+        font-family: 'Lexend Deca', sans-serif;
+        border: none;
+        border-radius: 40px;
+        margin-top: 3rem;
+        margin-bottom: 3rem; 
+        transition: 0.7s ease-in-out; 
+        cursor: pointer;     
+    }
+
+    
+    .card-one button {
+        color: var(--bright_orange);
+    }
+
+    .card-two button {
+        color: var(--dark_cyan);
+    }
+
+    .card-three button {
+        color: var(--very_dark_cyan);
+    }
+
+    .card-one button:hover {
+        border: 1px solid var(--very_light_gray_background_headings_buttons);
+        color: var(--very_light_gray_background_headings_buttons);
+        background-color: var(--bright_orange);
+    }
+    .card-two button:hover {
+        border: 1px solid var(--very_light_gray_background_headings_buttons);
+        color: var(--very_light_gray_background_headings_buttons);
+        background-color: var(--dark_cyan);
+    }
+    .card-three button:hover {
+        border: 1px solid var(--very_light_gray_background_headings_buttons);
+        color: var(--very_light_gray_background_headings_buttons);
+        background-color: var(--very_dark_cyan);
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: center; 
+        transition: 0.7s ease-in-out;   
+    }
+
+    footer a:link {
+        color: rgb(27, 25, 25);        
+    }
+        
+    footer a:visited {
+        color: rgb(27, 25, 25);        
+    }    
+    
+    footer a:hover {
+        color: rgb(27, 25, 25);        
+    }
+        
+    footer a:active {
+        color: rgb(27, 25, 25);        
+    }
+
+    footer:hover {
+        transform: scale(1.2);
+    }
+}
+
+  
