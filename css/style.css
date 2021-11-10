@@ -116,7 +116,11 @@ p {
     }    
     
     footer a {
-        text-decoration: none;
+        text-decoration: underline;
+        color: black;
+    }
+
+    footer p {
         color: black;
     }
 
@@ -218,11 +222,17 @@ p {
 
     footer {
         position: fixed;
-        bottom: 0;
+        bottom: 5px;
         width: 100vw;
         display: flex;
         justify-content: center; 
-        transition: 0.7s ease-in-out;   
+        transition: 0.7s ease-in-out;  
+        
+    }
+
+    footer p {
+        color: black;
+        text-align: center;
     }
 
     footer a:link {
@@ -242,7 +252,7 @@ p {
     }
 
     footer:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 
